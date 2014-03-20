@@ -1,0 +1,78 @@
+import java.util.Scanner;
+import java.io.*;
+import javax.swing.JOptionPane;
+
+
+public class Examen {
+      
+    
+    public Examen() {
+    }
+    
+
+    public static void main(String[] args) {
+       
+       Scanner in=new Scanner(System.in);
+        String NV, TP;
+        //char TP;
+        int Edad, cedula, NH,  VV, IngresoEmpresa, Comision;
+        //double  Comision; //Contado, Cheque, Tarjeta;
+        
+        System.out.print("Cuantos años tiene:");
+        Edad=in.nextInt();
+        
+        System.out.print("Numero de Cedula:");
+        cedula=in.nextInt();
+                     
+        System.out.print("Numero de Hijos:");
+        NH=in.nextInt();
+        
+        System.out.print("Valor de la Venta:");
+        VV=in.nextInt();
+        
+        System.out.print("Años en la empresa:");
+        IngresoEmpresa=in.nextInt();
+       		
+        in.nextLine();
+        System.out.println("Tipo de Venta (Contado/Cheque/Tarjeta):");
+        TP=in.nextLine(); //.charAt(1);
+        
+        System.out.print("Nombre del Vendedor:");
+        NV=in.nextLine();
+        
+        
+        
+        if ((IngresoEmpresa>=10)||((NH >=2)&&(NH <=4)))
+        	{Comision= VV*7 /100;
+        		System.out.println ("Su Comision es: "+Comision );
+        	}
+        	
+        	
+        	/*if((NH >=2)&&(NH <=4))
+        	{Comision= VV*7 /100;        	
+        		System.out.println("Su Comision es: "+Comision );
+        	} */
+        	
+        
+        if (TP=="contado")
+        	//System.out.println("Infiltrado 1");
+        	{Comision= VV*15 /100;        	
+        		System.out.println("Su Comision es: "+Comision );
+        	}
+        		
+        if (TP=="cheque")
+        	//System.out.println(Comision);
+        	{Comision= VV*10 /100;        	
+        		System.out.println("Su Comision es: "+Comision );
+        	}
+        	
+        if (TP=="tarjeta")
+        	//System.out.println("Infiltrado 1");
+        	{Comision= VV*5 /100;        	
+        		System.out.println("Su Comision es: "+Comision );	
+        	} 		
+        		
+        	
+        // TODO code application logic here
+    }
+}
